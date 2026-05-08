@@ -13,6 +13,7 @@
             min-height: 100vh;
             padding: 20px;
             padding-bottom: 80px;
+            scroll-behavior: smooth;
         }
         .container {
             max-width: 600px;
@@ -24,19 +25,37 @@
             margin: 20px 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+        h2 {
+            font-size: 28px;
+            margin: 40px 0 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
         .subtitle {
             font-size: 16px;
             margin-bottom: 30px;
             opacity: 0.9;
         }
-        .game-card {
+        .nav-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            margin: 0 5px 20px 5px;
+            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .game-card, .about-card {
             background: rgba(255,255,255,0.15);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 20px;
             margin: 20px 0;
             border: 1px solid rgba(255,255,255,0.3);
+            text-align: left;
         }
+        .game-card { text-align: center; }
         .game-title {
             font-size: 24px;
             margin-bottom: 10px;
@@ -75,6 +94,19 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             z-index: 100;
         }
+        .about-text {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        .about-text p { margin-bottom: 12px; }
+        .sosmed { margin-top: 15px; }
+        .sosmed a {
+            color: #ffeb3b;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -82,25 +114,49 @@
         <h1>🎮 BANG SAHLUL GAME STUDIO 🎮</h1>
         <p class="subtitle">Game-game gabut buatan sendiri. Main gratis bang!</p>
         
-        <div class="game-card">
-            <div class="emoji">🎯</div>
-            <div class="game-title">Tembak Botol</div>
-            <div class="game-desc">Tembak botol sebelum waktunya habis. Tes refleks lu bang!</div>
-            <a href="https://sahlulibasri47-berkomitmen.github.io/pubg-pertama-gua/" class="play-btn">MAIN SEKARANG</a>
+        <div>
+            <a href="#games" class="nav-btn">🎮 Game Gue</a>
+            <a href="#about" class="nav-btn">👑 Tentang Gue</a>
         </div>
         
-        <div class="game-card">
-            <div class="emoji">🚌</div>
-            <div class="game-title">Parkir Odong-Odong</div>
-            <div class="game-desc">Parkirin odong-odong susah banget. Nabrak = Ngulang!</div>
-            <a href="https://sahlulibasri47-berkomitmen.github.io/tuyul-tetanggaku/" class="play-btn">MAIN SEKARANG</a>
+        <div id="games">
+            <div class="game-card">
+                <div class="emoji">🎯</div>
+                <div class="game-title">Tembak Botol</div>
+                <div class="game-desc">Tembak botol sebelum waktunya habis. Tes refleks lu bang!</div>
+                <a href="https://sahlulibasri47-berkomitmen.github.io/pubg-pertama-gua/" class="play-btn">MAIN SEKARANG</a>
+            </div>
+            
+            <div class="game-card">
+                <div class="emoji">🚌</div>
+                <div class="game-title">Parkir Odong-Odong</div>
+                <div class="game-desc">Parkirin odong-odong susah banget. Nabrak = Ngulang!</div>
+                <a href="https://sahlulibasri47-berkomitmen.github.io/tuyul-tetanggaku/" class="play-btn">MAIN SEKARANG</a>
+            </div>
+            
+            <div class="game-card">
+                <div class="emoji">💸</div>
+                <div class="game-title">Hindari DC Gila</div>
+                <div class="game-desc">Lari dari debt collector. Ketabrak 3x = Motor ditarik 😭</div>
+                <a href="https://sahlulibasri47-berkomitmen.github.io/menghindari-dc-gila/" class="play-btn">MAIN SEKARANG</a>
+            </div>
         </div>
         
-        <div class="game-card">
-            <div class="emoji">💸</div>
-            <div class="game-title">Hindari DC Gila</div>
-            <div class="game-desc">Lari dari debt collector. Ketabrak 3x = Motor ditarik 😭</div>
-            <a href="https://sahlulibasri47-berkomitmen.github.io/menghindari-dc-gila/" class="play-btn">MAIN SEKARANG</a>
+        <div id="about">
+            <h2>👑 TENTANG BANG SAHLUL</h2>
+            <div class="about-card">
+                <div class="about-text">
+                    <p><strong>Yo! Gua Bang Sahlul dari Banda Aceh 🌊</strong></p>
+                    <p>Awalnya cuma gabut doang. Iseng belajar bikin game pake HP. Eh keterusan sampe punya 3 game + website sendiri 😂</p>
+                    <p><strong>Misi gua:</strong> Bikin game kocak buat ngilangin stress. Gratis buat semua orang!</p>
+                    <p><strong>Fakta kocak:</strong> Semua game ini 100% dibuat di HP. Sambil rebahan. Sambil ngopi.</p>
+                    <p>Kalo lu suka game gua, share ke temen ya. Biar makin rame yang main!</p>
+                    <div class="sosmed">
+                        <p><strong>Cari gua di:</strong></p>
+                        <a href="https://github.com/sahlulibasri47-berkomitmen" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="footer">
@@ -109,12 +165,10 @@
         </div>
     </div>
 
-    <!-- MUSIK BACKGROUND -->
     <audio id="bgm" loop>
         <source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
     </audio>
     
-    <!-- TOMBOL MUSIK -->
     <button id="musikBtn" onclick="toggleMusik()">🔇</button>
 
     <script>
@@ -133,8 +187,6 @@
                 nyala = true;
             }
         }
-        
-        // Auto kecilin volume biar gak kaget
         musik.volume = 0.3;
     </script>
 </body>
