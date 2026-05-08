@@ -12,6 +12,7 @@
             color: white;
             min-height: 100vh;
             padding: 20px;
+            padding-bottom: 80px;
         }
         .container {
             max-width: 600px;
@@ -61,6 +62,19 @@
             font-size: 14px;
             opacity: 0.7;
         }
+        #musikBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #ff6b6b;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
     </style>
 </head>
 <body>
@@ -94,5 +108,34 @@
             Dibuat di Banda Aceh pake HP doang 🔥
         </div>
     </div>
+
+    <!-- MUSIK BACKGROUND -->
+    <audio id="bgm" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- TOMBOL MUSIK -->
+    <button id="musikBtn" onclick="toggleMusik()">🔇</button>
+
+    <script>
+        let musik = document.getElementById('bgm');
+        let tombol = document.getElementById('musikBtn');
+        let nyala = false;
+        
+        function toggleMusik() {
+            if (nyala) {
+                musik.pause();
+                tombol.textContent = '🔇';
+                nyala = false;
+            } else {
+                musik.play();
+                tombol.textContent = '🔊';
+                nyala = true;
+            }
+        }
+        
+        // Auto kecilin volume biar gak kaget
+        musik.volume = 0.3;
+    </script>
 </body>
 </html>
